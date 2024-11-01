@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.banner {
+    background-image: url('./imagens/download.jfif');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+.product-card {
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: scale(1.05);
+}
