@@ -35,8 +35,8 @@ async function listarProdutos() {
                   <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="E-book 1">
                   <div class="card-body">
                       <h5 class="card-title">${produto.nome}</h5>
-                      <p class="card-text">Descubra receitas fáceis e saudáveis para o seu dia a dia.</p>
-                      <p class="text-primary fw-bold">R$ 37,00</p>
+                      <p class="card-text">${produto.descricao}</p>
+                      <p class="text-primary fw-bold">R$ ${produto.preco}</p>
                       <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
                       <a href="#" class="btn btn-outline-primary">Detalhes</a>
                   </div>

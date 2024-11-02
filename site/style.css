@@ -11,7 +11,16 @@ body {
 }
 .product-card {
     transition: transform 0.3s;
+    width: 100%;
 }
 .product-card:hover {
     transform: scale(1.05);
+}
+.product-container {
+    overflow: auto;
+
+}
+.card {
+    min-width: 200px;  /* Define a largura mínima */
+    min-height: 250px; /* Define a altura mínima */
 }
