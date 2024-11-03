@@ -22,12 +22,12 @@ const db = getFirestore(app);
 
 
 async function listarProdutos() {
-  const produtosSnapshot = await getDocs(collection(db, "produtos"));
-  const listaProdutos = produtosSnapshot.docs.map(doc => doc.data());
+  const Ebooks = await getDocs(collection(db, "E-book"));
+  const listaEBook = Ebooks.docs.map(doc => doc.data());
   
-  const containerProdutos = document.getElementById("produtos");
+  const containerProdutos = document.getElementById("produtos-ebook");
 
-  listaProdutos.forEach(produto => {
+  listaEBook.forEach(produto => {
     const produtoDiv = document.createElement("div");
     produtoDiv.innerHTML = `
       <div class="m-2 col-10">
@@ -45,6 +45,13 @@ async function listarProdutos() {
     `;
     containerProdutos.appendChild(produtoDiv);
   });
+
+
+  const Livros = await getDocs(collection(db, "E-book"));
+  const listaLivros = Livros.docs.map(doc => doc.data());
+
+  
+
 }
 
 listarProdutos()

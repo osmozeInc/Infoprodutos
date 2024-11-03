@@ -1,6 +1,30 @@
+
+/*
+||
+||      CONFIGURAÇÕES GERAIS
+||
+*/
 body {
     font-family: Arial, sans-serif;
 }
+
+
+/*
+||
+||      CARD DOS PRODUTOS
+||
+*/
+.produto-titulo {
+    margin-left: 5%;
+    color: #0d6efd;
+}
+
+
+/*
+||
+||      BANNER & NAVBAR
+||
+*/
 .banner {
     background-image: url('./imagens/download.jfif');
     background-size: cover;
@@ -8,6 +32,15 @@ body {
     color: #fff;
     padding: 50px 0;
     text-align: center;
+}
+/*
+||
+||      CARD DOS PRODUTOS
+||
+*/
+.card {
+    min-width: 200px;  /* Define a largura mínima */
+    min-height: 250px; /* Define a altura mínima */
 }
 .product-card {
     transition: transform 0.3s;
@@ -20,7 +53,10 @@ body {
     overflow: auto;
 
 }
-.card {
-    min-width: 200px;  /* Define a largura mínima */
-    min-height: 250px; /* Define a altura mínima */
-}
+
+
+/*
+||
+||      CARD DOS PRODUTOS
+||
+*/
