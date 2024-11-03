@@ -17,6 +17,10 @@ body {
 .produto-titulo {
     margin-left: 5%;
     color: #0d6efd;
+    text-decoration: none;
+    font-size: 190%;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 
@@ -39,21 +43,36 @@ body {
 ||
 */
 .card {
-    min-width: 200px;  /* Define a largura mínima */
-    min-height: 250px; /* Define a altura mínima */
+    min-width: 300px;   /* Define a largura mínima do card */
+    min-height: 400px;  /* Define a altura mínima do card */
+    max-width: 300px;
+    max-height: 400px;
 }
+
 .product-card {
     transition: transform 0.3s;
     width: 100%;
 }
+
 .product-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
+
 .product-container {
     overflow: auto;
-
 }
 
+.card-imagem {
+    width: 300px;      /* Largura fixa do container da imagem */
+    max-height: 200px;     /* Altura fixa do container da imagem */
+    overflow: hidden;  /* Oculta partes da imagem que ultrapassarem o container */
+}
+
+.card-imagem img {
+    width: 100%;       /* Ajusta a imagem para ocupar toda a largura do container */
+    height: 100%;      /* Ajusta a imagem para ocupar toda a altura do container */
+    object-fit: cover; /* Cobre o container sem distorcer */
+}
 
 /*
 ||
