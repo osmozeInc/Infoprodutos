@@ -28,6 +28,7 @@ async function listarProdutos() {
   const listaEBook = Ebooks.docs.map(doc => doc.data());
   var containerProdutos = document.getElementById("produtos-ebook");
 
+  var produtos = 0;
   listaEBook.forEach(produto => {
     const produtoDiv = document.createElement("div");
     produtoDiv.innerHTML = `
@@ -38,11 +39,15 @@ async function listarProdutos() {
                       <h5 class="card-title">${produto.nome}</h5>
                       <p class="card-text">${produto.descricao}</p>
                       <p class="text-primary fw-bold">R$ ${produto.preco.toFixed(2)}</p>
-                      <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+                      <a href="#" class="btn btn-primary btn-carrinho">Adicionar ao Carrinho</a>
                   </div>
               </div>
       </div>
     `;
+    if (produtos === 1)
+    {
+      return
+    }
     containerProdutos.appendChild(produtoDiv);
   });
 

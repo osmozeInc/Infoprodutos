@@ -74,6 +74,9 @@ body {
     object-fit: cover; /* Cobre o container sem distorcer */
 }
 
+.btn-carrinho{
+    align-items: bottom;
+}
 /*
 ||
 ||      CARD DOS PRODUTOS
