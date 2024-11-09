@@ -7,11 +7,9 @@
 body {
     font-family: Arial, sans-serif;
 }
-
-
 /*
 ||
-||      CARD DOS PRODUTOS
+||      SECÇÂO
 ||
 */
 .produto-titulo {
@@ -22,8 +20,6 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
 }
-
-
 /*
 ||
 ||      BANNER & NAVBAR
@@ -37,6 +33,7 @@ body {
     padding: 50px 0;
     text-align: center;
 }
+
 /*
 ||
 ||      CARD DOS PRODUTOS
@@ -66,12 +63,6 @@ body {
     width: 300px;      /* Largura fixa do container da imagem */
     max-height: 200px;     /* Altura fixa do container da imagem */
     overflow: hidden;  /* Oculta partes da imagem que ultrapassarem o container */
-}
-
-.card-imagem img {
-    width: 100%;       /* Ajusta a imagem para ocupar toda a largura do container */
-    height: 100%;      /* Ajusta a imagem para ocupar toda a altura do container */
-    object-fit: cover; /* Cobre o container sem distorcer */
 }
 
 .btn-carrinho{

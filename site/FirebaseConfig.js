@@ -28,8 +28,7 @@ async function listarProdutos() {
   const listaEBook = Ebooks.docs.map(doc => doc.data());
   var containerProdutos = document.getElementById("produtos-ebook");
 
-  var produtos = 0;
-  listaEBook.forEach(produto => {
+  listaEBook.forEach((produto, index) => {
     const produtoDiv = document.createElement("div");
     produtoDiv.innerHTML = `
       <div class="m-2 col-10">
@@ -44,7 +43,7 @@ async function listarProdutos() {
               </div>
       </div>
     `;
-    if (produtos === 1)
+    if (index === 7)
     {
       return
     }
