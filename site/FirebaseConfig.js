@@ -28,7 +28,7 @@ async function listarProdutos() {
   const listaEBook = Ebooks.docs.map(doc => doc.data());
   var containerProdutos = document.getElementById("produtos-ebook");
 
-  listaEBook.forEach(produto => {
+  listaEBook.forEach((produto, index) => {
     const produtoDiv = document.createElement("div");
     produtoDiv.className = "col-auto"; 
     produtoDiv.innerHTML = `
@@ -42,6 +42,9 @@ async function listarProdutos() {
                   </div>
               </div>
     `;
+    if (index == 7) {
+      return;
+    }
     containerProdutos.appendChild(produtoDiv);
   });
 
@@ -52,7 +55,7 @@ async function listarProdutos() {
   const listaApostila = Apostila.docs.map(doc => doc.data());
   const ApostilaContainer = document.getElementById("produtos-apostila");
 
-  listaApostila.forEach(produto => {
+  listaApostila.forEach((produto, index) => {
     const produtoDiv = document.createElement("div");
     produtoDiv.className = "col-auto";
     produtoDiv.innerHTML = `
@@ -66,6 +69,9 @@ async function listarProdutos() {
                   </div>
               </div>
     `;
+    if (index == 7) {
+      return;
+    }
       ApostilaContainer.appendChild(produtoDiv);
   });
 
@@ -76,7 +82,7 @@ async function listarProdutos() {
   const ListaCurso = Curso.docs.map(doc => doc.data());
   const CursoContainer = document.getElementById("produtos-curso");
 
-  ListaCurso.forEach(produto => {
+  ListaCurso.forEach((produto, index) => {
     const produtoDiv = document.createElement("div");
     produtoDiv.className = "col-auto";
     produtoDiv.innerHTML = `
@@ -90,6 +96,9 @@ async function listarProdutos() {
                   </div>
               </div>
     `;
+    if (index == 7) {
+      return;
+    }
       CursoContainer.appendChild(produtoDiv);
   });
 }
