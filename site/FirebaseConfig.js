@@ -30,18 +30,17 @@ async function listarProdutos() {
 
   listaEBook.forEach(produto => {
     const produtoDiv = document.createElement("div");
+    produtoDiv.className = "col-auto"; 
     produtoDiv.innerHTML = `
-      <div class="m-2 col-10">
-              <div class="card product-card shadow-sm">
-                  <img src="${produto.foto}" class="card-img-top" alt="E-book 1">
+              <div class="product-card card shadow-sm">
+                  <img src="${produto.foto}" class="card-img-top">
                   <div class="card-body">
                       <h5 class="card-title">${produto.nome}</h5>
                       <p class="card-text">${produto.descricao}</p>
                       <p class="text-primary fw-bold">R$ ${produto.preco.toFixed(2)}</p>
-                      <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+                      <a href="#" class="btn btn-primary col-12">Adicionar ao Carrinho</a>
                   </div>
               </div>
-      </div>
     `;
     containerProdutos.appendChild(produtoDiv);
   });
@@ -55,19 +54,18 @@ async function listarProdutos() {
 
   listaApostila.forEach(produto => {
     const produtoDiv = document.createElement("div");
+    produtoDiv.className = "col-auto";
     produtoDiv.innerHTML = `
-      <div class="m-2 col-10">
-              <div class="card product-card shadow-sm">
-                  <img src="${produto.foto}" class="card-img-top" alt="E-book 1">
+              <div class="product-card card shadow-sm">
+                  <img src="${produto.foto}" class="card-img-top">
                   <div class="card-body">
                       <h5 class="card-title">${produto.nome}</h5>
                       <p class="card-text">${produto.descricao}</p>
                       <p class="text-primary fw-bold">R$ ${produto.preco.toFixed(2)}</p>
-                      <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+                      <a href="#" class="btn btn-primary col-12">Adicionar ao Carrinho</a>
                   </div>
               </div>
-      </div>
-      `;
+    `;
       ApostilaContainer.appendChild(produtoDiv);
   });
 
@@ -80,27 +78,20 @@ async function listarProdutos() {
 
   ListaCurso.forEach(produto => {
     const produtoDiv = document.createElement("div");
+    produtoDiv.className = "col-auto";
     produtoDiv.innerHTML = `
-      <div class="m-2 col-10">
-              <div class="card product-card shadow-sm">
-                  <img src="${produto.foto}" class="card-img-top card-imagem" alt="E-book">
+              <div class="product-card card shadow-sm">
+                  <img src="${produto.foto}" class="card-img-top">
                   <div class="card-body">
                       <h5 class="card-title">${produto.nome}</h5>
                       <p class="card-text">${produto.descricao}</p>
                       <p class="text-primary fw-bold">R$ ${produto.preco.toFixed(2)}</p>
-                      <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+                      <a href="#" class="btn btn-primary col-12">Adicionar ao Carrinho</a>
                   </div>
               </div>
-      </div>
-      `;
+    `;
       CursoContainer.appendChild(produtoDiv);
   });
-
-
-
-
-
-
 }
 
 listarProdutos()

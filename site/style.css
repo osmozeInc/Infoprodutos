@@ -7,23 +7,6 @@
 body {
     font-family: Arial, sans-serif;
 }
-
-
-/*
-||
-||      ÁREA DOS PRODUTOS
-||
-*/
-.produto-titulo {
-    margin-left: 5%;
-    color: #0d6efd;
-    text-decoration: none;
-    font-size: 190%;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-
 /*
 ||
 ||      BANNER & NAVBAR
@@ -39,41 +22,43 @@ body {
 }
 /*
 ||
+||      ÁREA DOS PRODUTOS
+||
+*/
+.produto-titulo {
+    margin-left: 5%;
+    color: #0d6efd;
+    text-decoration: none;
+    font-size: 190%;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.produto-linha {
+    color: #0d6efd;
+}
+.produto-row{
+    overflow-x: auto;
+}
+/*
+||
 ||      CARD DOS PRODUTOS
 ||
 */
 .card {
-    min-width: 300px;   /* Define a largura mínima do card */
-    min-height: 400px;  /* Define a altura mínima do card */
     max-width: 300px;
     max-height: 400px;
+    margin: 16px;
+    flex-shrink: 0 !important;
 }
-
 .product-card {
     transition: transform 0.3s;
-    width: 100%;
 }
-
 .product-card:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
-
-.product-container {
-    overflow: auto;
+.botao-card{
+    align-items: center;
 }
-
-.card-imagem {
-    width: 300px;      /* Largura fixa do container da imagem */
-    max-height: 200px;     /* Altura fixa do container da imagem */
-    overflow: hidden;  /* Oculta partes da imagem que ultrapassarem o container */
-}
-
-.card-imagem img {
-    width: 100%;       /* Ajusta a imagem para ocupar toda a largura do container */
-    height: 100%;      /* Ajusta a imagem para ocupar toda a altura do container */
-    object-fit: cover; /* Cobre o container sem distorcer */
-}
-
 /*
 ||
 ||      A
