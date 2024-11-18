@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
-import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 
 // Configuração do Firebase
@@ -22,7 +22,7 @@ const db = getFirestore(app);
 
 
 // Função para listar produtos
-async function listarProdutos() {                               
+export async function listarProdutos() {                               
 
   const Ebooks = await getDocs(collection(db, "E-book"));           // Exibição dos E-books
   const listaEBook = Ebooks.docs.map(doc => doc.data());
@@ -36,9 +36,9 @@ async function listarProdutos() {
                   <img src="${produto.foto}" class="card-img-top">
                   <div class="card-body">
                       <h5 class="card-title">${produto.nome}</h5>
-                      <p class="card-text">${produto.descricao}</p>
+                      <p class="card-text">${produto.id}</p>
                       <p class="text-primary fw-bold">R$ ${produto.preco.toFixed(2)}</p>
-                      <a href="#" class="btn btn-primary col-12">Adicionar ao Carrinho</a>
+                      <a href="./site/produto_EBook.html?id=${produto.nome}" class="btn btn-primary col-12">Ver produto</a>
                   </div>
               </div>
     `;
@@ -47,7 +47,6 @@ async function listarProdutos() {
     }
     containerProdutos.appendChild(produtoDiv);
   });
-
 
 
 
@@ -77,7 +76,6 @@ async function listarProdutos() {
 
 
 
-
   const Curso = await getDocs(collection(db, "Curso"));            // Exibição dos Cursos
   const ListaCurso = Curso.docs.map(doc => doc.data());
   const CursoContainer = document.getElementById("produtos-curso");
@@ -103,4 +101,20 @@ async function listarProdutos() {
   });
 }
 
-listarProdutos()
+
+
+export async function ProductEbookPage(productId){
+  const Ebooks = await getDocs(collection(db, "E-book")); 
+  const listaEBook = Ebooks.docs.map(doc => doc.data());
+
+  listaEBook.forEach((produto) => {
+    if (produto.nome === productId) {
+      
+      document.getElementById('produtoDescricao').textContent = produto.descricao;
+
+    }
+  })
+
+
+
+}

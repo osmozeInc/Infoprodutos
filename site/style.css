@@ -62,6 +62,99 @@ body {
 }
 /*
 ||
-||      A
+||      PAGINA DE PRODUTO
 ||
+*/
+.produtoFoto {
+    border: 5px solid #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    @media (max-width: 576px) {
+        .produtoFoto {
+            width: 300;
+            height: 450px;
+        }
+    }
+
+    @media (max-width: 900px) and (min-width: 577px) {
+        .produtoFoto {
+            width: 250px;;
+            height: 375px;
+        }
+    }
+
+    @media (min-width: 901px) and (max-width: 1300px) {
+        .produtoFoto {
+            width: 300px;
+            height: 450px;
+        }
+    }
+
+    @media (min-width: 1300px) {
+        .produtoFoto {
+            width: 350px;
+            height: 525px;
+        }
+    }
+
+
+
+/*
+h1, h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+
+/* Estilo do container principal 
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border: none;
+    margin-top: 20px;
+}
+
+/* Estilo dos botões 
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Estilo para a descrição completa 
+#produtoDescricaoCompleta {
+    font-size: 1rem;
+    color: #555;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 20px;
+}
 */
