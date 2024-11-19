@@ -109,12 +109,16 @@ export async function ProductEbookPage(productId){
 
   listaEBook.forEach((produto) => {
     if (produto.nome === productId) {
-      
-      document.getElementById('produtoDescricao').textContent = produto.descricao;
 
+      const DivImg = document.getElementById("EbookCapa");
+
+      const img = document.createElement("img");
+      img.classList.add("produtoFoto");
+      img.src = produto.Capa;
+
+      DivImg.appendChild(img);
+
+      document.getElementById("produtoNome").textContent = produto.nome;
     }
   })
-
-
-
 }
