@@ -118,7 +118,7 @@ export async function ProductEbookPage(productId){
 
       DivImg.appendChild(img);
 
-      document.getElementById("produtoNome").textContent = produto.nome;
+      document.getElementById("NomeDoProduto").textContent = produto.nome;
     }
   })
 }
