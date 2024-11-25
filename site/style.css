@@ -23,10 +23,10 @@ body {
 
 /*
 ||
-||      ÁREA DOS PRODUTOS
+||      INICIO: SEÇÃO DOS PRODUTOS
 ||
 */
-.produto-titulo {
+.home-secao-titulo {
     margin-left: 5%;
     color: #0d6efd;
     text-decoration: none;
@@ -34,15 +34,15 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
 }
-.produto-linha {
+.home-secao-linha {
     color: #0d6efd;
 }
-.produto-row{
+.home-secao-row{
     overflow-x: auto;
 }
 /*
 ||
-||      CARD DOS PRODUTOS
+||      INICIO: CARD DOS PRODUTOS
 ||
 */
 .card {
@@ -65,39 +65,43 @@ body {
 ||      PAGINA DE PRODUTO
 ||
 */
-.produtoFoto {
+.produto-produto-capa {
     border: 5px solid #f1f1f1;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
     @media (max-width: 576px) {
-        .produtoFoto {
+        .produto-produto-capa {
             width: 300px;
             height: 450px;
         }
     }
 
     @media (max-width: 900px) and (min-width: 577px) {
-        .produtoFoto {
+        .produto-produto-capa {
             width: 250px;
             height: 375px;
         }
     }
 
     @media (min-width: 901px) and (max-width: 1300px) {
-        .produtoFoto {
+        .produto-produto-capa {
             width: 300px;
             height: 450px;
         }
     }
 
     @media (min-width: 1300px) {
-        .produtoFoto {
+        .produto-produto-capa {
             width: 350px;
             height: 525px;
         }
     }
-
+.produto-produto-titulo {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.produto-produto-descricao
 
 
 /*

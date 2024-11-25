@@ -113,12 +113,14 @@ export async function ProductEbookPage(productId){
       const DivImg = document.getElementById("EbookCapa");
 
       const img = document.createElement("img");
-      img.classList.add("produtoFoto");
+      img.classList.add("produto-produto-capa");
       img.src = produto.Capa;
 
       DivImg.appendChild(img);
 
       document.getElementById("NomeDoProduto").textContent = produto.nome;
+      document.getElementById("DescricaoDoProduto").textContent = produto.descricao;
+      document.getElementById("PrecoDoProduto").textContent = "R$ " + produto.preco.toFixed(2);
     }
   })
 }
