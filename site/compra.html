@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Compra - Guia Essencial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .produto-container {
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .produto-img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .produto-detalhes {
+            margin-top: 20px;
+        }
+        .preco {
+            font-size: 1.8rem;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .btn-comprar {
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        .formas-pagamento img {
+            width: 50px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="produto-container container">
+    <div class="row g-4">
+        <!-- Coluna: Imagem do Produto -->
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/500" alt="Imagem do Produto" class="produto-img">
+        </div>
+
+        <!-- Coluna: Informações do Produto -->
+        <div class="col-md-6">
+            <h1 id="NomeDoProduto" class="produto-titulo">Título do Produto</h1>
+            <p id="DescricaoDoProduto" class="produto-descricao">Descrição completa do produto, destacando suas vantagens, benefícios e características principais.</p>
+            <p id="PrecoDoProduto" class="preco">R$ 149,99</p>
+            
+            <button class="btn btn-primary btn-comprar">Comprar Agora</button>
+            <button class="btn btn-outline-primary btn-comprar mt-2">Adicionar ao Carrinho</button>
+
+            <div class="produto-detalhes mt-4">
+                <h4>Detalhes do Produto:</h4>
+                <ul>
+                    <li>Características únicas do produto.</li>
+                    <li>Material ou composição.</li>
+                    <li>Garantia de qualidade.</li>
+                    <li>Outras informações relevantes.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Formas de Pagamento -->
+    <div class="formas-pagamento">
+        <h3>Formas de Pagamento</h3>
+        <p>Escolha a forma de pagamento que mais lhe agrada:</p>
+        <ul>
+            <li>Cartão de Crédito: até 12x sem juros.</li>
+            <li>Boleto Bancário.</li>
+            <li>Pix com desconto de 10%.</li>
+            <li>Transferência bancária.</li>
+        </ul>
+        <div>
+            <img src="https://via.placeholder.com/50" alt="Cartão de Crédito">
+            <img src="https://via.placeholder.com/50" alt="Pix">
+            <img src="https://via.placeholder.com/50" alt="Boleto">
+            <img src="https://via.placeholder.com/50" alt="Transferência">
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Avaliações -->
+    <div class="avaliacoes">
+        <h3>Avaliações dos Clientes</h3>
+        <div class="list-group mt-3">
+            <div class="list-group-item">
+                <h5 class="mb-1">João Silva</h5>
+                <small>5 estrelas</small>
+                <p class="mb-1">Produto excelente, superou minhas expectativas!</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1">Maria Oliveira</h5>
+                <small>4 estrelas</small>
+                <p class="mb-1">Ótimo produto, mas a entrega demorou um pouco.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

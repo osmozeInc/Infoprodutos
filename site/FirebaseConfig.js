@@ -120,7 +120,9 @@ export async function ProductEbookPage(productId){
 
       document.getElementById("NomeDoProduto").textContent = produto.nome;
       document.getElementById("DescricaoDoProduto").textContent = produto.descricao;
+      document.getElementById("PrecoDoProdutoDesconto").textContent = "R$ " + produto.desconto.toFixed(2);
       document.getElementById("PrecoDoProduto").textContent = "R$ " + produto.preco.toFixed(2);
+      document.getElementById("produtoDescricaoCompleta").innerHTML = produto.descricao_completa; 
     }
   })
 }

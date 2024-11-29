@@ -43,39 +43,58 @@
         <button class="btn btn-outline-success" type="submit">Lupa</button>
       </div>
     </div>
+    <br><br><br>
   </section>
-  <br><br><br>
 
-          <!-- Produto -->
+
+          <!-- Produto - Principal -->
   <section>
     <div class="offset-1 col-10">
       <div class="row">
 
-        <div id="EbookCapa" class="col-auto">
+        <div id="EbookCapa" class="col-auto"> <!-- capa do produto-->
         </div>
   
-          <div class="col">
-            <!-- capa do produto em js-->
-            <br>
+        <div class="col d-flex flex-column justify-content-between"> <!-- Dados do produto pt1-->
+          <div style="margin-top: 30px;">
             <h1 id="NomeDoProduto" class="produto-produto-titulo">Erro</h1>
+            <br>
             <p id="DescricaoDoProduto" class="produto-produto-descricao">Erro</p>
-            <p id="PrecoDoProduto" class="produto-produto-preco">Erro</p>
-            <button class="btn btn-outline-primary btn-lg">Adicionar ao Carrinho</button>
-            <button class="btn btn-outline-primary btn-lg">Ver Mais Detalhes</button>
+            <br>
           </div>
 
-      </div>
-    </section>
-  
-  
-      <div class="mt-4">
-          <h3>Descrição Completa</h3>
-          <p id="produtoDescricaoCompleta">
-              Este produto é uma ótima escolha para quem procura qualidade e preço baixo. Ideal para uso diário e com
-              materiais de alta durabilidade.
-          </p>
+          <div style="margin-bottom: 30px;"> <!-- Dados do produto pt2-->
+            <p id="PrecoDoProdutoDesconto" class="produto-produto-desconto">Erro</p>
+            <p id="PrecoDoProduto" class="produto-produto-preco">Erro</p>
+            <button class="btn btn-outline-primary btn-lg" onclick="window.location.href='compra.html';">Comprar</button>
+            <button class="btn btn-outline-primary btn-lg">Adicionar ao carrinho</button>
+            <button class="btn btn-outline-danger btn-lg">STR</button>
+          </div>
+        </div>
       </div>
     </div>
+    <br><br><br>
+  </section>
+  
+          <!-- Produto - Descrição -->
+  <section>
+    <div class="offset-1 col-9">
+      <h3>Descrição Completa</h3>
+      <br>
+      <p id="produtoDescricaoCompleta"></p>
+    </div>
+    <br><br><br>
+  </section>
+
+
+    <!-- Footer -->
+  <footer class="bg-light py-4">
+    <div class="container text-center">
+        <p>&copy; 2024 Loja de E-books - Todos os direitos reservados</p>
+        <a href="#" class="text-primary">Política de Privacidade</a> | <a href="#" class="text-primary">Termos de Uso</a>
+    </div>
+  </footer>
+      
 
 
 
