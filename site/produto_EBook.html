@@ -50,28 +50,28 @@
           <!-- Produto - Principal -->
   <section>
     <div class="offset-1 col-10">
-      <div class="row">
+      	<div class="row">
 
-        <div id="EbookCapa" class="col-auto"> <!-- capa do produto-->
-        </div>
+        	<div id="EbookCapa" class="col-auto"> <!-- capa do produto-->
+        	</div>
   
-        <div class="col d-flex flex-column justify-content-between"> <!-- Dados do produto pt1-->
-          <div style="margin-top: 30px;">
-            <h1 id="NomeDoProduto" class="produto-produto-titulo">Erro</h1>
-            <br>
-            <p id="DescricaoDoProduto" class="produto-produto-descricao">Erro</p>
-            <br>
-          </div>
+        	<div class="col d-flex flex-column justify-content-between"> <!-- Dados do produto pt1-->
+          		<div style="margin-top: 30px;">
+            		<h1 id="NomeDoProduto" class="produto-produto-titulo"></h1>
+            		<br>
+            		<p id="DescricaoDoProduto" class="produto-produto-descricao"></p>
+            		<br>
+          		</div>
 
-          <div style="margin-bottom: 30px;"> <!-- Dados do produto pt2-->
-            <p id="PrecoDoProdutoDesconto" class="produto-produto-desconto">Erro</p>
-            <p id="PrecoDoProduto" class="produto-produto-preco">Erro</p>
-            <button class="btn btn-outline-primary btn-lg" onclick="window.location.href='compra.html';">Comprar</button>
-            <button class="btn btn-outline-primary btn-lg">Adicionar ao carrinho</button>
-            <button class="btn btn-outline-danger btn-lg">STR</button>
-          </div>
-        </div>
-      </div>
+          		<div style="margin-bottom: 30px;"> <!-- Dados do produto pt2-->
+            		<p id="PrecoDoProdutoDesconto" class="produto-produto-desconto"></p>
+            		<p id="PrecoDoProduto" class="produto-produto-preco"></p>
+            		<button class="btn btn-outline-primary btn-lg" id="comprar">Comprar</button>
+            		<button class="btn btn-outline-primary btn-lg">Adicionar ao carrinho</button>
+            		<button class="btn btn-outline-danger btn-lg">STR</button>
+          		</div>
+        	</div>
+      	</div>
     </div>
     <br><br><br>
   </section>
@@ -87,6 +87,28 @@
   </section>
 
 
+  <!--
+          <-- Avaliações ->
+  <section>
+    <div class="">
+      <h3>Avaliações dos Clientes</h3>
+      <div class="list-group mt-3">
+        <div class="list-group-item">
+          <h5 class="mb-1">João Silva</h5>
+          <small>5 estrelas</small>
+          <p class="mb-1">Produto excelente, superou minhas expectativas!</p>
+        </div>
+        <div class="list-group-item">
+          <h5 class="mb-1">Maria Oliveira</h5>
+          <small>4 estrelas</small>
+          <p class="mb-1">Ótimo produto, mas a entrega demorou um pouco.</p>
+          </div>
+        </div>
+              
+  </section>
+  -->
+
+
     <!-- Footer -->
   <footer class="bg-light py-4">
     <div class="container text-center">
@@ -96,21 +118,26 @@
   </footer>
       
 
-
-
-
-
-
+  
+<script>
+	params = new URLSearchParams(window.location.search);
+	const produtoId = params.get('id');
+	document.getElementById("comprar").addEventListener("click", function () {
+	window.location.href = "carrinho.html?id=" + produtoId;
+	});
+</script>
 
 <script type="module">
-  import { ProductEbookPage } from './FirebaseConfig.js';
+	import { ProductEbookPage } from './FirebaseConfig.js';
 
-  // produto.js
-  const params = new URLSearchParams(window.location.search);
-  const produtoId = params.get('id'); // Captura o ID do produto a partir da URL
+	// produto.js
+	const params = new URLSearchParams(window.location.search);
+	const Produto = params.get('id');
 
-  ProductEbookPage(produtoId);
+	ProductEbookPage(Produto);
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

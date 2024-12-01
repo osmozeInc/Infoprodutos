@@ -21,6 +21,7 @@ const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
 
+
 // Função para listar produtos
 export async function listarProdutos() {                               
 
@@ -122,7 +123,13 @@ export async function ProductEbookPage(productId){
       document.getElementById("DescricaoDoProduto").textContent = produto.descricao;
       document.getElementById("PrecoDoProdutoDesconto").textContent = "R$ " + produto.desconto.toFixed(2);
       document.getElementById("PrecoDoProduto").textContent = "R$ " + produto.preco.toFixed(2);
-      document.getElementById("produtoDescricaoCompleta").innerHTML = produto.descricao_completa; 
+      document.getElementById("produtoDescricaoCompleta").innerHTML = produto.descricao_completa;
     }
   })
+}
+
+
+
+export  async function RealizarCompra(productId) {
+  
 }

@@ -102,7 +102,15 @@ body {
     margin-bottom: 10px;
 }
 .produto-produto-descricao
+{
+    font-size: 100%;
+}
 
+.produto-produto-preco {
+    font-size: 1.8rem;
+    color: #28a745;
+    font-weight: bold;
+}
 
 /*
 h1, h3 {
